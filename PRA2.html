@@ -1,0 +1,1274 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <script src="./js/script1.js"></script>
+    <link rel="stylesheet" href="./css/w3.css" />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="https://font.googleapis.com/css?family=Roboto"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" ></link>
+		<meta name="viewport"  content="width=device-width, initial-scale=1.0"></meta>
+    
+		<style>
+				body{
+					background-color:#DFDFDF;
+					font-family:serif;
+					color:#0C1730;
+					box-sizing: border-box;
+					font-size:100%;
+				}
+				
+				/*MY STYLE*/
+				.border-center{
+					display:flex;
+					justify-content:center;
+				}
+				
+				.xlarge{
+					font-size:150%;
+				}
+				
+				/*HEADER*/
+				.header{
+					color:#0C1730;
+					font-family:'Roboto',san-sherif;
+				}
+				
+				.forum-name{
+					/*font-size:250%;*/
+					margin:1%;
+				}
+		
+				.profile{
+					margin:1%;
+				}
+				
+				
+				/*SUBHEADING*/
+				.subheader-container{
+					background-color:#0C1730;
+				}
+				
+				
+				#largemenu{
+					display:none;
+				}
+				
+				
+				#menu{
+					overflow:hidden;
+					display:none;
+					padding:5x;
+				}
+				
+				.topbottompadding{
+					padding-top:8px;
+					padding-bottom:8px;
+				}
+				
+				@media screen and (orientation:landscape){
+					#smallmenu{
+						display:none;
+					}
+					
+					#largemenu{
+							display:block;
+					}
+					
+				}
+				
+				
+				
+				/*MAIN*/
+				.main-container{
+					background-color:#DFDFDF;
+					padding-top:35px;
+				}
+
+				@media screen and (orientation:landscape){
+					.main-container{
+						font-size:135%;
+					}
+
+					.footer-container{
+						font-size:235%;
+					}
+					
+				}
+				
+				/*BANNER*/
+				.banner-container{
+					display:flex;
+					justify-content:center;
+					margin-bottom:10px;
+				}
+				
+				.banner{
+					height:120px;
+					width:75%;
+					background-color:white;
+				}
+				
+				/*POST*/
+				.post-container{
+					margin:7px 15px;
+				}
+				
+				.post{
+					width:98%;
+					padding:6px 1px;
+				}
+				
+				.post-link{
+					color:#0C1730;
+					text-decoration:none;
+				}
+				
+				/*BANNER2*/
+				.banner2{
+					height:120px;
+					background-color:white;
+				}
+				
+				/*FOOTER*/
+				.footer-container{
+					font-size:14px;
+					background-color:#DFDFDF;
+				}
+
+				@media screen and (orientation:landscape){
+					.footer-container{
+						font-size:125%;
+					}
+
+					.profile-footer{
+						font-size:125%;
+					}
+					
+				}
+				
+				
+				
+				/*PROFILE PAGE*/
+				.profilepage-container{
+					background-color:#0C1730;
+					color:#DFDFDF;
+					height:1200px;
+				}
+
+				@media screen and (orientation:landscape){
+					.profile ,.profilepage-container{
+						font-size:115%;
+					}
+
+				}
+				
+				.profilepage{
+					width:95%;
+				}
+				
+				@media screen and (orientation:landscape){
+					.profilemenu, .adminmenu{
+						font-size:115%;
+					}
+				}
+				
+
+				.signedin-line{
+					width:60%;
+				}
+				
+				.fa.fa-user{
+					height:440px;
+				}
+				
+				
+				/*LOGIN PAGE*/
+				.login-container{
+					background-color:#0C1730;
+					color:#DFDFDF;
+				}
+				
+				.login{
+					color:#0C1730;
+					width:90%;
+				}
+				
+				@media screen and (orientation:landscape){
+					.login{
+						font-size:125%;
+					}
+
+				}
+				
+				.loginform{
+					font-weight:bold;
+					font-family:serif;
+					background-color:#0C1730;
+					color:grey;
+					width:200px;
+				}
+
+				@media screen and (orientation:landscape){
+					.form-input{
+						width:30%;
+					}
+				}
+				
+				
+				
+				
+				#ee{
+					display:block;
+					height:250px;
+					color:red;
+				}
+				
+				@media screen and (orientation:landscape){
+					#ee{
+						color:blue;
+					}
+				}
+				
+				
+				
+		</style>
+</head>
+<body>
+
+			<div class="w3-top w3-white">
+			<!--HEADER-->
+			<div class="header-container">
+					<div class="header w3-row">
+					
+								<!--FORUM NAME-->
+								<div class="forum-name w3-col w3-xxlarge" style="width:70%;">
+										<b><i class="">MYFORUM</i></b>
+								</div>
+								<!--PROFILE-->
+								<div class="profile w3-center w3-col" style="width:25%;">
+											<i class="fa fa-user-circle fa-2x"></i><br /><b><i class="">Login</i></b>
+								</div>
+					
+					</div>
+			</div>
+			
+			<!--SUB HEADER-->
+			<div class="subheader-container w3-padding">
+					<div id="smallmenu" class="subheader w3-row">
+								<div class="w3-text-grey w3-large w3-col" style="width:90%;"><b><i>General</i></b></div>
+						  	 <div class="w3-text-grey w3-large w3-col" style="width:10%; display:block;" id="openmenu"><a href="javascript:void(0);" onclick="openmenu()"><i class="fa fa-bars" style="color:grey;"></i></a></div>
+								<div class="w3-text-grey w3-large w3-col" style="width:10%; display:none;" id="closemenu"><a href="javascript:void(0);" onclick="closemenu()"><i class="fa fa-arrow-circle-up" style="color:grey;"></i></a></div>
+					</div>			
+					
+					
+					
+								<div id="largemenu" class="largemenu-container w3-row">
+											<div class="w3-text-grey   w3-col" style="width:20%;"><b><i>General</i></b></div>
+											<div class="w3-text-grey   w3-col" style="width:20%;"><b><i>General</i></b></div>
+											<div class="w3-text-grey   w3-col" style="width:20%;"><b><i>General</i></b></div>
+											<div class="w3-text-grey   w3-col" style="width:20%;"><b><i>General</i></b></div>
+											<div class="w3-text-grey   w3-col" style="width:20%;"><b><i>General</i></b></div>
+					   		</div>
+					
+					
+								
+								<div class="" id="menu">
+								<br />
+										
+										<div class="w3-border-small" id="menu-line"></div>
+										
+										<div class="w3-text-grey w3-large  topbottompadding" style="width:90%;"><b><i>Music</i></b></div>
+										
+										<div class="w3-border-small" id="menu-line"></div>
+										
+										<div class="w3-text-grey  w3-large topbottompadding" style="width:90%;"><b><i>Education</i></b></div>
+										
+										<div class="w3-border-small" id="menu-line"></div>
+										
+										<div class="w3-text-grey  w3-large topbottompadding" style="width:90%;"><b><i>Business</i></b></div>
+										
+										<div class="w3-border-small" id="menu-line"></div>
+										
+										<div class="w3-text-grey  w3-large topbottompadding" style="width:90%;"><b><i>Health</i></b></div>
+										
+										<div class="w3-border-small" id="menu-line"></div>
+										
+										<div class="w3-text-grey  w3-large topbottompadding" style="width:90%;"><b><i>Agriculture</i></b></div>
+										
+										<br />
+								</div>
+			</div>
+			<!-- -->
+			</div>
+			
+			
+			
+			<br />
+			<br />
+			<br />
+			<br />
+
+
+
+			<!--MAIN-->
+			<!--<script>
+				var media=window.matchMedia("(orientation:landscape)");
+				
+				function mediaquery(e){
+						if(e.matches){
+							
+						}
+				};
+						media.addListener(mediaquery);
+						mediaquery(media);
+			
+			
+			</script>-->
+			<!--BODY-->
+			<!--MAIN PAGE-->
+			<div class="main-container">
+						<div class="main w3-center">
+						
+									<!--BANNER-->
+									<div class="banner-container">
+												<div class="banner">
+															<b><i class="">PLACE YOUR ADS HERE</i></b>
+												</div>
+									</div>
+									
+									
+									<!--CREATE ADS LINK-->
+									<a class=" ">(Create Advert)</a>
+									
+									
+									<!--POST-->
+									<div class="post-container border-center">
+												<div class="post w3-white w3-round-large">
+														<a class="post-link">
+														<i class=" ">**<b>dh zsghhh ddfghhs fgnjjd dcvb</b>**</i>
+														</a>
+														<div class="  w3-text-grey">by <b><a href="#">James</a></b></div>
+														<!--LIKES COMMENT-->
+														<!--<div class="w3-text-grey w3-padding w3-left">
+																<i class="fa fa-comment-o fa-3x"</i>
+																<i class=" ">4 july</i>
+																<i class="fa fa-share-alt fa-3x"></i>
+														</div>-->
+														
+												</div>
+									</div>
+									
+									
+									<div class="post-container border-center">
+												<div class="post w3-white w3-round-large">
+														<a class="post-link">
+														<i class=" ">**<b>dh zsghhh tty xxc cxxcb xxxc fxxx cvb ddfghhs fgnjjd dcvb</b>**</i>
+														</a>
+												</div>
+									</div>
+									
+									
+									
+									<div class="post-container border-center">
+												<div class="post w3-white w3-round-large">
+														<a class="post-link">
+														<i class=" ">**<b>today news</b>**</i>
+														</a>
+												</div>
+									</div>
+									
+									<div class="post-container border-center">
+												<div class="post w3-white w3-round-large">
+														<a class="post-link">
+														<i class=" ">**<b>dh zsghhh ddfghhs fgnjjd dcvb</b>**</i>
+														</a>
+												</div>
+									</div>
+									
+									
+									
+									<div class="post-container border-center">
+												<div class="post w3-white w3-round-large">
+														<a class="post-link">
+														<i class=" ">**<b>dh zsghhh ddfghhs fgnjjd dcvb</b>**</i>
+														</a>
+												</div>
+									</div>
+									
+									
+									
+									<div class="post-container border-center">
+												<div class="post w3-white w3-round-large">
+														<a class="post-link">
+														<i class=" ">**<b>how to cook rice and beans without oil in nigeria</b>**</i>
+														</a>
+												</div>
+									</div>
+									
+									<div class="post-container border-center">
+												<div class="post w3-white w3-round-large">
+														<a class="post-link">
+														<i class=" ">**<b>dh zsghhh ddfghhs fgnjjd dcvb</b>**</i>
+														</a>
+												</div>
+									</div>
+									
+									<div class="post-container border-center">
+												<div class="post w3-white w3-round-large">
+														<a class="post-link">
+														<i class=" ">**<b>dh zsghhh ddfghhs fgnjjd dcvb</b>**</i>
+														</a>
+												</div>
+									</div>
+									
+									<div class="post-container border-center">
+												<div class="post w3-white w3-round-large">
+														<a class="post-link">
+														<i class=" ">**<b>dh zsghhh ddfghhs fgnjjd dcvb</b>**</i>
+														</a>
+												</div>
+									</div>
+									
+									<div class="post-container border-center">
+												<div class="post w3-white w3-round-large">
+														<a class="post-link">
+														<i class=" ">**<b>dh zsghhh ddfghhs fgnjjd dcvb</b>**</i>
+														</a>
+												</div>
+									</div>
+									
+									<div class="post-container border-center">
+												<div class="post w3-white w3-round-large">
+														<a class="post-link">
+														<i class=" ">**<b>dh zsghhh ddfghhs fgnjjd dcvb</b>**</i>
+														</a>
+												</div>
+									</div>
+									
+									
+									<div class="post-container border-center">
+												<div class="post w3-white w3-round-large">
+														<a class="post-link">
+														<i class=" ">**<b>dh zsghhh ddfghhs fgnjjd dcvb</b>**</i>
+														</a>
+												</div>
+									</div>
+									
+									
+									<div class="post-container border-center">
+												<div class="post w3-white w3-round-large">
+														<a class="post-link">
+														<i class=" ">**<b>dh zsghhh ddfghhs fgnjjd dcvb</b>**</i>
+														</a>
+												</div>
+									</div>
+									
+									
+									
+																		
+									<!--PAGINATION-->
+									<div class="w3-container">
+												<div class=" ">
+															<a class="">(1)</a> 
+															<a class="">(2)</a> 
+															<a class="">(3)</a> 
+															<a class="">(4)</a> 
+															<a class="">(5)</a> 
+															<a class="">(6)</a> 
+															<a class="">(7)</a> 
+															<a class="">(8)</a> 
+															<a class="">(9)</a> 
+															<!--<a class="">(10)</a>-->...
+															<a class="">(100)</a> 
+															<br />
+															
+															(<a class="">Create New Topic</a>) 
+															<!--(<a class="">Follow</a>) -->
+															(<a class="">Mail Mod</a>) 
+															
+												</div>
+									</div>
+									
+									
+									
+									
+									<hr />
+									<!--BANNER2-->
+									<div class="banner2-container">
+											<div class="banner2">
+													<b class=" ">PLACE ADVERT HERE</b>
+											</div>
+									</div>
+									
+									
+									
+									<hr />
+										
+									
+						</div>
+			</div>
+			
+			
+			
+			
+									<!--FOOTER PAGE-->
+									<div class="w3-container w3-center footer-container">
+										<b>Members Online :</b>
+										<br />
+										<i>(<b>593 Members </b>and <b>95985 Guests </b> online in last 5minutes!)</i>
+										<br />
+										<b>stats :</b>
+										<br />
+										<i>2,433,455 members</i>
+										
+										<hr />
+										<!--<br />
+										(<b>Go Up</b>)
+										<br />
+										<hr />-->
+										
+										<form method="">
+												<input type="text" name="search" required></input>
+												<input type="submit" value="Search"></input>
+										</form>
+										<b>Myforum -</b> Copyright &copy2020.
+										<br />
+										<i>All right reserved. <b>See How To Advertise</b></i>
+										<br />
+										<i><b>Disclaimer :</b>Every Forum member is solely responsibe
+										for anything he/she posts or upload on Myforum.</i>
+									</div>
+									<br />
+									
+									
+								
+			
+			
+			<!--PROFILE HAS IT OWN FOOTER-->
+			<!--PROFILE  PAGE-->
+			<!--UNSIGNED PROFILE  PAGE-->
+			<div class="profilepage-container border-center">
+						<div class="profilepage w3-center w3-text-grey">
+						
+									<div style="height:150px;"><i class="fa fa-user fa-5x"></i></div>
+										
+									<div class=" xlarge"><b><i>LOGIN</i></b></div>
+									<div class=" xlarge"><b><i>SIGN UP</i></b></div>
+									<br />
+									
+									<!--FOOTER PAGE-->
+									<div class="w3-container w3-center profile-footer">
+												<div class="w3-border-small" id=""></div>
+									<b>Members Online :</b>
+									<br />
+									<i>(<b>593 Members </b>and <b>5985 Guests </b> online in last 5minutes!)</i>
+									<br />
+									<b>stats :</b>
+									<br />
+									<i>2,433,455 members</i>
+									
+												<div class="w3-border-small" id=""></div>
+												<br />
+									<!--<br />
+									(<b>Go Up</b>)
+									<br />
+									<hr />-->
+									
+									<form method="">
+											<input type="text" name="search" required></input>
+											<input type="submit" value="Search"></input>
+									</form>
+									<b>Myforum -</b> Copyright &copy2020.
+									<br />
+									<i>All right reserved. <b>See How To Advertise</b></i>
+									<br />
+									<i><b>Disclaimer :</b>Every Forum member is solely responsibe
+									for anything he/she posts or upload on Myforum.</i>
+									</div>
+									<br />
+						
+						
+						</div>
+			</div>
+			
+			
+			
+			<!--LOGIN PAGE-->
+			<div class="login-container border-center">
+					<div class="login w3-center w3-grey w3-margin">
+					
+								<br />
+								<br />
+								<br />
+								<form action="" method="" style="color:#0C1730;">
+										<b><i class=" xlarge">Username :</i></b>
+										<br />
+										<input type="text" name="username" class="form-input" required></input>
+										
+										<br />
+										<br />
+										<b><i class=" xlarge">Password :</i></b>
+										<br />
+										<input type="password" name="password" class="form-input" required></input>
+										<br />
+										<a href="#"><i><b>forgotten password?</b></i></a>
+										
+										<br />
+										<br />
+										<br />
+										<input type="submit" value="LOGIN" class="loginform  xlarge w3-round-large"></input>
+										<br />
+										
+										<i><b>new member? click <a href="#">here</a></b></i>
+								</form>
+								<br />
+								<br />
+					
+					</div>
+			</div>
+			
+			
+			
+			<!--SIGN UP PAGE-->
+			<div class="login-container border-center">
+					<div class="login w3-center w3-grey w3-margin">
+					
+								<br />
+								<br />
+								<br />
+								<form action="" method="" style="color:#0C1730;">
+										<b><i class=" xlarge">Username :</i></b>
+										<br />
+										<input type="text" name="username" class="form-input" required></input>
+										
+										<br />
+										<br />
+										<b><i class=" xlarge">Email :</i></b>
+										<br />
+										<input type="email" name="email" class="form-input" required></input>
+										
+										<br />
+										<br />
+										<b><i class=" xlarge">Phone no :</i></b>
+										<br />
+										<input type="number" name="phonenumber" class="form-input" required></input>
+										
+										<br />
+										<br />
+										<b><i class=" xlarge">Password :</i></b>
+										<br />
+										<input type="password" name="password" class="form-input" required></input>
+										
+										<br />
+										<br />
+										<b><i class=" xlarge">Comfirm Password :</i></b>
+										<br />
+										<input type="password" name="comfirmpassword" class="form-input" required></input>
+										<br />
+										<a href="#"><i><b>By clicking the "Create account" button you agree to our terms and condition</b></i></a>
+										
+										<br />
+										<br />
+										<br />
+										<input type="submit" value="Create Account" class="loginform  xlarge w3-round-large"></input>
+										<br />
+										
+										<i><b>old member? <a href="#">login</a></b></i>
+								</form>
+								<br />
+								<br />
+					
+					</div>
+			</div>
+			
+			
+			<!--FORGOTTEN PASSWORD-->
+			<div class="login-container border-center">
+					<div class="login w3-center w3-grey w3-margin">
+					
+								<br />
+								<br />
+								<br />
+								<form action="" method="" style="color:#0C1730;">
+										
+										<b><i class=" xlarge">Enter your phone number to retrieve your password</i></b>
+										<br />
+										<br />
+										<input type="number" name="phonenumber" class="form-input" required></input>
+										<br />
+										
+										<br />
+										<br />
+										<br />
+										<input type="submit" value="Reset Password" class="loginform  xlarge w3-round-large"></input>
+										<br />
+										
+								</form>
+								<br />
+								<br />
+					
+					</div>
+			</div>
+			
+			
+			
+			
+			
+			<!--SIGN UP PAGE-->
+			<div class="login-container border-center">
+					<div class="login w3-center w3-grey w3-margin">
+					
+								<br />
+								<br />
+								<br />
+								<form action="" method="" style="color:#0C1730;">
+										<b><i class=" xlarge">Reset code :</i></b>
+										<br />
+										<input type="number" name="resetcode" class="form-input" required></input>
+										
+										<br />
+										<br />
+										<b><i class=" xlarge">New<br /> Password :</i></b>
+										<br />
+										<input type="password" name="password" class="form-input" required></input>
+										
+										<br />
+										<br />
+										<b><i class=" xlarge">Comfirm <br />Password :</i></b>
+										<br />
+										<input type="password" name="comfirmpassword" class="form-input" required></input>
+										
+										<br />
+										<br />
+										<br />
+										<input type="submit" value="Reset Password" class="loginform  xlarge w3-round-large"></input>
+										<br />
+										
+								</form>
+								<br />
+								<br />
+					
+					</div>
+			</div>
+			
+			
+			
+			<!--SIGNED IN PROFILE-->
+			<div class="profilepage-container border-center">
+						<div class="profilepage w3-center w3-text-grey">
+						
+										
+									<br />
+									<!--PROFILE PIC-->
+									<div class="w3-center">
+												<img src="./img/sirjames.jpg" class="w3-circle w3-border" style="width:100px;" id=""></img>
+									</div>
+												<b><i class=" xlarge">SIR JAMES</i></b>
+									<br />
+									<br />
+									<br />
+									<br />
+									
+									
+													<div class=" xlarge"><a href="#"><b><i>Edit Profile</i></b></a></div>
+																<div class="w3-border-small" id="signedin-line"></div>
+													<div class=" xlarge"><a href="#"><b><i>My Topics</i></b></a></div>
+																<div class="w3-border-small" id="signedin-line"></div>
+													<div class=" xlarge"><a href="#"><b><i>My Posts</i></b></a></div>
+																<div class="w3-border-small" id="signedin-line"></div>
+													<div class=" xlarge"><a href="#"><b><i>Mentions<i class="w3-text-red">(4)</i></i></b></a></div>
+																<div class="w3-border-small" id="signedin-line"></div>
+													<div class=" xlarge"><a href="#"><b><i>Followed Topics</i></b></a></div>
+																<div class="w3-border-small" id="signedin-line"></div>
+													<br />
+													
+													
+													<b><i class=" ">Time Registered :</i></b>
+													<i class="">15 july 2020</i>
+													<br />
+													
+													<b><i class=" ">Signature :</i></b>
+													<br />
+													<i class="">with God all things is impossibe</i>
+													<br />
+													
+													<b><i class=" ">Last seen :</i></b>
+													<i class="">15mins ago</i>
+													<br />
+													<br />
+													
+													
+													
+													<!--FOLLOWING-->
+													<b><i class=" ">FOLLOWING(4) :</i></b>
+													<br />
+													<i class=" ">(
+													<a href="#">switgal</a>, 
+													<a href="#">love</a>, 
+													<a href="#">angel</a>, 
+													<a href="#">john</a>
+													)</i>
+													<br />
+													<br />
+													<br />
+													
+									
+									<!--FOOTER PAGE-->
+									<div class="w3-container w3-center">
+												<div class="w3-border-small" id=""></div>
+									<b>Members Online :</b>
+									<br />
+									<i>(<b>593 Members </b>and <b>5985 Guests </b> online in last 5minutes!)</i>
+									<br />
+									<b>stats :</b>
+									<br />
+									<i>2,433,455 members</i>
+									
+												<div class="w3-border-small" id=""></div>
+												<br />
+									<!--<br />
+									(<b>Go Up</b>)
+									<br />
+									<hr />-->
+									
+									<form method="">
+											<input type="text" name="search" required></input>
+											<input type="submit" value="Search"></input>
+									</form>
+									<b>Myforum -</b> Copyright &copy2020.
+									<br />
+									<i>All right reserved. <b>See How To Advertise</b></i>
+									<br />
+									<i><b>Disclaimer :</b>Every Forum member is solely responsibe
+									for anything he/she posts or upload on Myforum.</i>
+									</div>
+									<br />
+						
+						
+						</div>
+			</div>
+			
+
+						
+			
+			<!--ADMIN PROFILE-->
+			<div class="profilepage-container border-center">
+						<div class="profilepage w3-center w3-text-grey">
+						
+										
+									<br />
+									<!--PROFILE PIC-->
+									<div class="w3-center">
+												<img src="./img/sirjames.jpg" class="w3-circle w3-border" style="width:100px;" id=""></img>
+									</div>
+												<b><i class=" xlarge">SIR JAMES</i></b>
+									<br />
+									<br />
+									<br />
+									<br />
+									
+									
+													<!--PROFILE MENU-->
+													<div class="profilemenu w3-row">
+													
+															<div class="w3-col" style="width:48%;text-align:left;">
+																		<div class=" "><a href="#"><b><i>Edit Profile</i></b></a></div>
+																					<div class="w3-border-small" id="signedin-line"></div>
+																		<div class=" "><a href="#"><b><i>My Topics</i></b></a></div>
+																					<div class="w3-border-small" id="signedin-line"></div>
+																		<div class=" "><a href="#"><b><i>My Posts</i></b></a></div>
+																					<div class="w3-border-small" id="signedin-line"></div>
+																		<div class=" "><a href="#"><b><i>Mentions<i class="w3-text-red">(4)</i></i></b></a></div>
+																					<div class="w3-border-small" id="signedin-line"></div>
+																		<div class=" "><a href="#"><b><i>Followed Topics</i></b></a></div>
+																					<div class="w3-border-small" id="signedin-line"></div>
+															</div>
+															
+															
+															<!--ADMIN MENU-->
+															<div class="adminmenu w3-col" style="width:48%;text-align:right;">
+																		<div class=" "><a href="#"><b><i>Manage Ads</i></b></a></div>
+																					<div class="w3-border-small" id="signedin-line"></div>
+																		<div class=" "><a href="#"><b><i>My moderators</i></b></a></div>
+																					<div class="w3-border-small" id="signedin-line"></div>
+																		<div class=" "><a href="#"><b><i>Blocked Users</i></b></a></div>
+																					<div class="w3-border-small" id="signedin-line"></div>
+																		<div class=" "><a href="#"><b><i>Pending Posts</i></b></a></div>
+																					<div class="w3-border-small" id="signedin-line"></div>
+															</div>
+																
+													</div>
+													<br />
+													
+													
+													<b><i class=" ">Time Registered :</i></b>
+													<i class="">15 july 2020</i>
+													<br />
+													
+													<b><i class=" ">Signature :</i></b>
+													<br />
+													<i class="">with God all things is impossibe</i>
+													<br />
+													
+													<b><i class=" ">Last seen :</i></b>
+													<i class="">15mins ago</i>
+													<br />
+													<br />
+													
+													
+													
+													<!--FOLLOWING-->
+													<b><i class=" ">FOLLOWING(4) :</i></b>
+													<br />
+													<i class=" ">(
+													<a href="#">switgal</a>, 
+													<a href="#">love</a>, 
+													<a href="#">angel</a>, 
+													<a href="#">john</a>
+													)</i>
+													<br />
+													<br />
+													<br />
+													
+									
+									<!--FOOTER PAGE-->
+									<div class="w3-container w3-center">
+												<div class="w3-border-small" id=""></div>
+									<b>Members Online :</b>
+									<br />
+									<i>(<b>593 Members </b>and <b>5985 Guests </b> online in last 5minutes!)</i>
+									<br />
+									<b>stats :</b>
+									<br />
+									<i>2,433,455 members</i>
+									
+												<div class="w3-border-small" id=""></div>
+												<br />
+									<!--<br />
+									(<b>Go Up</b>)
+									<br />
+									<hr />-->
+									
+									<form method="">
+											<input type="text" name="search" required></input>
+											<input type="submit" value="Search"></input>
+									</form>
+									<b>Myforum -</b> Copyright &copy2020.
+									<br />
+									<i>All right reserved. <b>See How To Advertise</b></i>
+									<br />
+									<i><b>Disclaimer :</b>Every Forum member is solely responsibe
+									for anything he/she posts or upload on Myforum.</i>
+									</div>
+									<br />
+						
+						
+						</div>
+			</div>
+			
+
+			
+			
+			
+			
+			<!--VIEWED PROFILE-->
+			<div class="profilepage-container border-center">
+						<div class="profilepage w3-center w3-text-grey">
+						
+										
+									<br />
+									<!--PROFILE PIC-->
+									<div class="w3-center">
+												<img src="./img/sirjames.jpg" class="w3-circle w3-border" style="width:100px;" id=""></img>
+									</div>
+												<b><i class=" xlarge">SIR JAMES</i></b>
+									<br />
+									<br />
+									
+									
+									
+													
+													<b><i class=" ">Location :</i></b>
+													<i class="">Abuja</i>
+													<br />
+													
+													<b><i class=" ">Gender :</i></b>
+													<i class="">male</i>
+													<br />
+													
+													<b><i class=" ">Email :</i></b>
+													<i class="">sirjames@gmail.com</i>
+													<br />
+													
+													<b><i class=" ">Time Registered :</i></b>
+													<i class="">15 july 2020</i>
+													<br />
+													
+													<b><i class=" ">Signature :</i></b>
+													<br />
+													<i class="">with God all things is impossibe</i>
+													<br />
+													
+													<b><i class=" ">Last seen :</i></b>
+													<i class="">15mins ago</i>
+													
+													
+													
+													
+													<br />
+													<br />
+									
+													<!--<div class=" xlarge"><a href="#"><b><i>Edit Profile</i></b></a></div>
+																<div class="w3-border-small" id="signedin-line"></div>-->
+													<div class=" xlarge"><a href="#"><b><i>James Topics</i></b></a></div>
+																<div class="w3-border-small" id="signedin-line"></div>
+													<div class=" xlarge"><a href="#"><b><i>James Posts</i></b></a></div>
+																<div class="w3-border-small" id="signedin-line"></div>
+													<div class=" xlarge"><a href="#"><b><i>Follow James</i></b></a></div>
+																<div class="w3-border-small" id="signedin-line"></div>
+													<div class=" xlarge"><a href="#"><b><i>Email James</i></b></a></div>
+																<div class="w3-border-small" id="signedin-line"></div>
+													<br />
+													
+													
+													
+													<!--FOLLOWING-->
+													<b><i class=" ">FOLLOWING(4) :</i></b>
+													<br />
+													<i class=" ">(
+													<a href="#">switgal</a>, 
+													<a href="#">love</a>, 
+													<a href="#">angel</a>, 
+													<a href="#">john</a>
+													)</i>
+													<br />
+													<br />
+													<br />
+									
+									<!--FOOTER PAGE-->
+									<div class="w3-container w3-center">
+												<div class="w3-border-small" id=""></div>
+									<b>Members Online :</b>
+									<br />
+									<i>(<b>593 Members </b>and <b>5985 Guests </b> online in last 5minutes!)</i>
+									<br />
+									<b>stats :</b>
+									<br />
+									<i>2,433,455 members</i>
+									
+												<div class="w3-border-small" id=""></div>
+												<br />
+									<!--<br />
+									(<b>Go Up</b>)
+									<br />
+									<hr />-->
+									
+									<form method="">
+											<input type="text" name="search" required></input>
+											<input type="submit" value="Search"></input>
+									</form>
+									<b>Myforum -</b> Copyright &copy2020.
+									<br />
+									<i>All right reserved. <b>See How To Advertise</b></i>
+									<br />
+									<i><b>Disclaimer :</b>Every Forum member is solely responsibe
+									for anything he/she posts or upload on Myforum.</i>
+									</div>
+									<br />
+						
+						
+						</div>
+			</div>
+			
+			
+			
+			
+			
+			<!--EDIT PROFILE-->
+			<div class="login-container border-center">
+					<div class="login w3-center w3-grey w3-margin">
+					
+								<br />
+								<br />
+								<br />
+								<form action="" method="" style="color:#0C1730;">
+										<b><i class=" xlarge">Profile Picture :</i></b>
+										<br />
+										<input type="file" name="profilepix" accept="image/*"></input>
+										
+										<br />
+										<br />
+										<b><i class=" xlarge">Email :</i></b>
+										<br />
+										<input type="email" name="email" placeholder="sirjames@gmail.com" class="form-input" required></input>
+										
+										<br />
+										<br />
+										<b><i class=" xlarge">Phone no :</i></b>
+										<br />
+										<input type="number" name="phonenumber" placeholder="08140480701" class="form-input" required></input>
+										
+										<br />
+										<br />
+										<b><i class=" xlarge">Birthdate :</i></b>
+										<br />
+										<input type="text" name="Birthdate" placeholder="03/07/1995" class="form-input"></input>
+										
+										<br />
+										<br />
+										<b><i class=" xlarge">Location :</i></b>
+										<br />
+										<input type="text" name="location" placeholder="Abuja,Nigeria" class="form-input"></input>
+										
+										<br />
+										<br />
+										<b><i class=" xlarge">Signature :</i></b>
+										<br />
+										<textarea rows="5" name="password" placeholder="Nothing pass God" class="form-input" required></textarea>
+										
+										<br />
+										<br />
+										<b><i class=" xlarge">Password :</i></b>
+										<br />
+										<input type="password" name="password" placeholder="Enter password to save setting" class="form-input" required></input>
+										
+										<br />
+										
+										<br />
+										<br />
+										<br />
+										<input type="submit" value="Save Settings" class="loginform  xlarge w3-round-large"></input>
+										<br />
+										
+								</form>
+								<br />
+								<br />
+					
+					</div>
+			</div>
+			
+			
+			
+			
+			<!--CREATE POST-->
+			<div class="login-container border-center">
+					<div class="login w3-center w3-grey w3-margin">
+					
+								<br />
+								<br />
+								<form action="" method="" style="color:#0C1730;">
+								
+										<b><i class=" xlarge"><u>Create Post</u></i></b>
+										<br />
+								
+										<b><i class=" xlarge">
+										<a href="#">Myforum</a> /
+										<a href="#">News</a>
+										</i></b>
+										<br />
+										<br />
+										<br />
+										
+								
+										<b><i class=" xlarge">Topic :</i></b>
+										<br />
+										<input type="text" name="newtopic" class="form-input" required></input>
+										
+										<br />
+										<br />
+										<b><i class=" xlarge">Content :</i></b>
+										<br />
+										<textarea rows="10" name="newcontent" class="form-input" required></textarea>
+										
+										<br />
+										<br />
+										<b><i class=" xlarge">Images :</i></b>
+										<br />
+										<input type="file" name="image1"></input>
+										<br />
+										<input type="file" name="image2"></input>
+										<br />
+										<input type="file" name="image3"></input>
+										
+										<br />
+										<br />
+										<br />
+										<input type="submit" value="Create Post" class="loginform  xlarge w3-round-large"></input>
+										<br />
+										
+								</form>
+								<br />
+								<br />
+					
+					</div>
+			</div>
+			
+			
+			
+			
+			<!--EMAIL PAGE-->
+			<div class="login-container border-center">
+					<div class="login w3-center w3-grey w3-margin">
+					
+								<br />
+								<br />
+								<br />
+								<form action="" method="" style="color:#0C1730;">
+										<b><i class=" xlarge">Email to :</i></b>
+										<br />
+										<b><i class="">Sirjames@gmail.com</i></b>
+										
+										<br />
+										<br />
+										<b><i class=" xlarge">Subject :</i></b>
+										<br />
+										<input type="text" name="emailsubject" class="form-input" required></input>
+										
+										<br />
+										<br />
+										<b><i class=" xlarge">Message :</i></b>
+										<br />
+										<textarea rows="7" name="emailmessage" class="form-input" required></textarea>
+										
+										<br />
+										<br />
+										<br />
+										<input type="submit" value="Send Mail" class="loginform  xlarge w3-round-large"></input>
+										<br />
+										
+								</form>
+								<br />
+								<br />
+					
+					</div>
+			</div>
+			
+			
+			
+			
+			<script>
+						
+							var x=document.getElementById("menu");
+							var y=document.getElementById("openmenu");
+							var z=document.getElementById("closemenu");
+			
+			
+						function openmenu(){
+								x.style.display="block";
+								y.style.display="none";
+								z.style.display="block";
+						}
+						
+						function closemenu(){
+								x.style.display="none";
+								y.style.display="block";
+								z.style.display="none";
+						}
+			</script>
+				
+		
+		
+</body>
+</html>
