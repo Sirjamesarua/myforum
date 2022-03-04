@@ -4,6 +4,8 @@
 <head>
     <title>{{config('app.name')}}</title>
     <script src="./js/script1.js"></script>
+      <link rel = "stylesheet" href = "https://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/w3-css/4.1.0/w3.css" ></link>
     <link rel="stylesheet" href="{{asset('css/w3.css')}}" />
     <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}" />
     <link rel="stylesheet" href="https://font.googleapis.com/css?family=Roboto"></link>
